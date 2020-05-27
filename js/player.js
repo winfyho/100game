@@ -7,13 +7,13 @@ export default {
     y: 0,
 
     moveX:3,
-    moveY:8,
+    moveY:3,
 
     direction: 'normal',
     moveSpeed: 0.06,
 
     falling: false,
-    fallSpeedX: 0.01,
+    fallSpeedX: 0.02,
     fallSpeedY: 0.04,
     fallTimer: null,
 
@@ -38,24 +38,18 @@ export default {
 
     handleKeydown() {
         document.addEventListener('keydown', (e) => {
-            if (this.falling) {
-                return
-            }
+
             if (e.keyCode === 37) {
                 this.direction = 'left'
                 this.move()
             } else if (e.keyCode === 39) {
                 this.direction = 'right'
                 this.move()
-            } else {
-                return
-            }
+            } 
         })
     },
     move() {
-        if(this.falling){
-            return
-        }
+        
         if (this.direction === 'left') {
             this.moveX -= this.moveSpeed
         } else if (this.direction === 'right') {
@@ -70,8 +64,6 @@ export default {
         }
     },
     fall(){
-        let speedX = this.direction === 'left' ? -this.fallSpeedX : this.fallSpeedX
-        this.moveX += speedX
         this.moveY += this.fallSpeedY
     },
     isOnBlock() {

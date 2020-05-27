@@ -45,6 +45,8 @@ methods
     - 向右速度
 - isOnBlock() 是否在物体上，是则停止坠落
 
+
+***
 ## 障碍物block
 - type 类型：normal / danger
 - width 宽度

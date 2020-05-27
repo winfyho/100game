@@ -8,3 +8,19 @@
     overflow-y: scroll;
     position: relative;
 }
+
+/* 游戏信息 */
+.infor{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 0.2rem 0;
+    font-size: 0.3rem;
+}
+.infor span{
+    display: block;
+}
+.infor span#degree{
+    width: 100%;
+    text-align: center;
+}
