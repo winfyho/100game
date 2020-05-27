@@ -1,0 +1,10 @@
+#app{
+    background: #1E1E1E;
+    font-size: 0.4rem;
+    overflow-y: scroll;
+}
+
+#wraper{
+    overflow-y: scroll;
+    position: relative;
+}
