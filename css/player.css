@@ -2,5 +2,5 @@
     position: absolute;
     box-sizing: border-box;
     background: #0f0;
-    transition: linear .1s;
+    transition: ease .05s;
 }

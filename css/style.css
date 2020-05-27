@@ -8,6 +8,10 @@
     overflow-y: scroll;
     position: relative;
 }
+#wraper-num li{
+    height: 1rem;
+    line-height: 1rem;
+}
 
 /* 游戏信息 */
 .infor{

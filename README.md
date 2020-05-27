@@ -51,5 +51,9 @@ methods
 - type 类型：normal / danger
 - width 宽度
 - height 高度
-- left 水平位置
-- top 垂直位置
+- x 水平位置
+- y 垂直位置
+
+methods
+
+createEle() 创建dom元素

@@ -7,15 +7,17 @@ export default {
     y: 0,
 
     moveX:3,
-    moveY:3,
+    moveY:5,
 
     direction: 'normal',
-    moveSpeed: 0.06,
+    moveSpeed: 0.07,
 
     falling: false,
-    fallSpeedX: 0.02,
-    fallSpeedY: 0.04,
+    fallSpeedX: 0.03,
+    fallSpeedY: 0.06,
     fallTimer: null,
+
+    curBlock:null,
 
     init() {
         const player = document.createElement('div')
@@ -49,7 +51,9 @@ export default {
         })
     },
     move() {
-        
+        // if(this.falling){
+        //     return
+        // }
         if (this.direction === 'left') {
             this.moveX -= this.moveSpeed
         } else if (this.direction === 'right') {
@@ -62,9 +66,22 @@ export default {
         if (this.moveX > 7.5 - this.width) {
             this.moveX = 7.5 - this.width
         }
+        if(this.moveX<this.curBlock.x-this.width){
+            this.falling = true
+        }else if(this.moveX >this.curBlock.x+this.curBlock.width){
+            this.falling = true
+
+        }
     },
     fall(){
-        this.moveY += this.fallSpeedY
+        if(this.falling){
+            this.moveY += this.fallSpeedY
+        }
+    },
+    stopFall(){
+        this.falling = false
+        // console.log('当前block',this.curBlock);
+        
     },
     isOnBlock() {
         setTimeout(() => {
