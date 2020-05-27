@@ -48,12 +48,14 @@ methods
 
 ***
 ## 障碍物block
-- type 类型：normal / danger
+- type 类型：normal / danger /goal
 - width 宽度
 - height 高度
 - x 水平位置
 - y 垂直位置
+- el dom 元素
 
 methods
 
-createEle() 创建dom元素
+- createEle() 创建dom元素
+    - 随机生成type和颜色
