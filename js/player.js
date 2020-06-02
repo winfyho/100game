@@ -2,7 +2,7 @@ export default {
     el: null,
 
     width: 1,
-    height: 1.5,
+    height: 1,
     x: 0,
     y: 0,
 

@@ -13,6 +13,8 @@ export default {
     index: 1,
     timer: null,
 
+    degree:1,
+
     init(config) {
         this.player = config.player || document.getElementById('player')
         this.el = document.getElementById('wraper')
@@ -38,6 +40,13 @@ export default {
         // })
     },
     scroll() {
+        console.log(this.top);
+        
+        if(-this.top > this.degree*20){
+            this.degree += 1
+            this.speed += 0.01
+            this.player.fallSpeedY += 0.018
+        }
         this.top -= this.speed
         this.el.style.transform = `translateY(${this.top}rem)`
 

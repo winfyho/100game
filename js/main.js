@@ -44,4 +44,20 @@ const animation = () => {
     }
 }
 
-timer = window.requestAnimationFrame(animation)
+function startGame() {
+    let btn = document.createElement('div')
+    let mask = document.createElement('div')
+    btn.className = 'btn-start'
+    mask.className = 'btn-mask'
+    mask.appendChild(btn)
+    btn.innerText = "开始游戏"
+    btn.onclick = function () {
+        timer = window.requestAnimationFrame(animation)
+
+        mask.style.display = 'none'
+    }
+    document.body.appendChild(mask)
+}
+
+startGame()
+// alert('start')
